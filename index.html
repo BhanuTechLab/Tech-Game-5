@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>2D Platform Oyunu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <style>
+    /* Tam ekran, kaydırmasız bir yapı */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #000;
+    }
+    
+    /* Canvas'ın tam ekranı kaplamasını sağlar */
+    #gameCanvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Mobil kontrol butonları */
+    .controls {
+      position: fixed;
+      bottom: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      opacity: 0.5;
+      /* Butonları yarı saydam yapar */
+    }
+    
+    #leftBtn,
+    #rightBtn,
+    #jumpBtn {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background-color: #555;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    #leftBtn {
+      position: absolute;
+      left: 20px;
+    }
+    
+    #rightBtn {
+      position: absolute;
+      left: 100px;
+      /* Sol butonun biraz sağına */
+    }
+    
+    #jumpBtn {
+      position: absolute;
+      right: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="gameCanvas"></canvas>
+  
+  <div class="controls">
+    <button id="leftBtn">&larr;</button> <button id="rightBtn">&rarr;</button> <button id="jumpBtn">&#x2191;</button>
+  </div>
+  
+  <script src="mapgenerator.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>

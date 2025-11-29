@@ -493,7 +493,7 @@ window.onload = function() {
     ctx.fillText('Skor: ' + score, canvas.width / 2, canvas.height / 2);
     
     ctx.font = '24px Arial';
-    ctx.fillText('Yeniden başlamak için dokunun', canvas.width / 2, canvas.height * 0.7);
+    ctx.fillText('Tap to restart the game', canvas.width / 2, canvas.height * 0.7);
   }
   
   // Ekran yeniden boyutlandırma
